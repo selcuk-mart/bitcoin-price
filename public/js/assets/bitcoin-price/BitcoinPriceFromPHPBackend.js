@@ -1,4 +1,4 @@
-class BitcoinPrice {
+class BitcoinPriceFromPHPBackend {
 
     constructor(elem) {
         this.elem = elem;
@@ -22,13 +22,18 @@ class BitcoinPrice {
         return new Promise((resolve, reject) => {
             let start = document.getElementById('start-date').value;
             let finish = document.getElementById('finish-date').value;
-            let url = 'https://api.coindesk.com/v1/bpi/historical/close.json?start='
-                + start
-                + '&end='
-                + finish
-                + '&index=[USD]';
+            let url = '/fetch-bitcoin-price';
             $.ajax({
                 url: url,
+                type: 'post',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data: {
+                    start: start,
+                    end: finish,
+                    currency: 'USD'
+                },
                 success: function (data) {
                     let result = data.bpi;
                     resolve(result);
@@ -58,7 +63,7 @@ class BitcoinPrice {
     }
 
     prepareChart(remote_data) {
-        if(this.myChart instanceof Chart){
+        if (this.myChart instanceof Chart) {
             this.myChart.destroy();
         }
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BitcoinData;
 use App\Http\Controllers\ChartController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +19,4 @@ Route::get('/', fn() => view('chart', [
     'last_date' => ChartController::selectToday(),
     'first_date' => ChartController::selectOldDay(),
 ]));
+Route::post('/fetch-bitcoin-price',[BitcoinData::class,'fetch']);

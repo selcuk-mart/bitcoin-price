@@ -19,7 +19,9 @@
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/assets/bitcoin-price/BitcoinPrice.js"></script>
+    <script src="js/assets/bitcoin-price/BitcoinPriceFromPHPBackend.js"></script>
     <script src="js/assets/bitcoin-price/DatePicker.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <title>Bitcoin Price</title>
 </head>
