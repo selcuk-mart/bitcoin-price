@@ -32,10 +32,10 @@
         <div style="margin-top: 15px;">
             <div class="row">
                 <div class="col">
-                    <input  class="form-control" type="text" class="" id="start-date" value="{{ $first_date }}">
+                    <input  class="form-control" type="text" id="start-date" value="{{ $first_date }}">
                 </div>
                 <div class="col">
-                    <input class="form-control" type="text" class="" id="finish-date" value="{{ $last_date }}">
+                    <input class="form-control" type="text" id="finish-date" value="{{ $last_date }}">
                 </div>
                 <div class="col"><input id="myChartRender" type="button" value="Render" class="btn btn-secondary"></div>
             </div>
