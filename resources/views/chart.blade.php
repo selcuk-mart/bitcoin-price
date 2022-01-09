@@ -21,7 +21,7 @@
     <script src="js/assets/bitcoin-price/BitcoinPrice.js"></script>
     <script src="js/assets/bitcoin-price/BitcoinPriceFromPHPBackend.js"></script>
     <script src="js/assets/bitcoin-price/DatePicker.js"></script>
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
 
     <title>Bitcoin Price</title>
 </head>
@@ -32,7 +32,7 @@
         <div style="margin-top: 15px;">
             <div class="row">
                 <div class="col">
-                    <input  class="form-control" type="text" id="start-date" value="{{ $first_date }}">
+                    <input class="form-control" type="text" id="start-date" value="{{ $first_date }}">
                 </div>
                 <div class="col">
                     <input class="form-control" type="text" id="finish-date" value="{{ $last_date }}">
